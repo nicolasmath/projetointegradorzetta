@@ -65,7 +65,7 @@ A rede está estruturada na subrede **192.168.20.0/24** para organizar os ativos
 | **Linux Server (GLPI)** | `192.168.20.20` | FE0 | Sistema de chamados técnicos |
 | **Linux Server (Web/Wiki)** | `192.168.20.30` | FE0 | Aplicação Web Corporativa |
 | **Impressora de Rede** | `192.168.20.50` | FE0 | Impressora compartilhada do escritório |
-| **Access Point (Wi-Fi)** | `192.168.20.60` | Port 0 | Distribuição de sinal sem fio (SSID: HairHiTech_Corp) |
+| **Access Point (Wi-Fi)** | `192.168.20.60` | Port 0 | Distribuição de sinal sem fio (SSID: Zetta) |
 | **Estações de Trabalho** | DHCP | FE0 / Dynamic | IPs distribuídos do `.100` ao `.200` |
 
 ---
