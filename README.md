@@ -116,7 +116,7 @@ Abaixo está o registro cronológico das etapas de montagem, configuração e te
 *Momento em que os Sysadmins e Engenheiros de Rede colocaram a inteligência do projeto para rodar: criação do Controlador de Domínio no Windows Server, subida das diretivas (GPOs), escopo DHCP ativo e inicialização dos servidores Linux (GLPI e Web).*
 
 <p align="center">
-  <img src="documentacao/fotos/fase3_windows_server.jpg" alt="Painel do Active Directory e DHCP" width="400" style="margin: 10px;">
+  <img src="dhcp-active.jpg" alt="Painel do Active Directory e DHCP" width="400" style="margin: 10px;">
   <img src="documentacao/fotos/fase3_linux_glpi.jpg" alt="Servidores Linux e Tela de Chamados GLPI" width="400" style="margin: 10px;">
 </p>
 
