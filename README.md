@@ -126,7 +126,7 @@ Abaixo está o registro cronológico das etapas de montagem, configuração e te
 *Configuração de regras de redirecionamento no Firewall do Debian para interceptar tentativas de acesso a redes sociais e conteúdos indesejados (Porta 80). O tráfego capturado é desviado por DNAT para o Windows Server, onde o serviço de Web Server (IIS) hospeda uma página institucional customizada hiperdetalhada da Zetta Corp.*
 
 <p align="center">
-  <img src="DEB_FW" alt="Regras de Firewall e Redirecionamento no Debian" width="400" style="margin: 10px;">
+  <img src="DEB_FW.jpg" alt="Regras de Firewall e Redirecionamento no Debian" width="400" style="margin: 10px;">
   <img src="paginaerro.png" alt="Página de Bloqueio Zetta Carregada no Notebook" width="400" style="margin: 10px;">
 </p>
 
