@@ -58,14 +58,15 @@ A rede está estruturada na subrede **192.168.20.0/24** para organizar os ativos
 
 ### Plano de Endereçamento IP
 
-| Equipamento / Serviço | Endereço IP | Interface | Função no Projeto |
-| :--- | :--- | :--- | :--- |
-| **Gateway / Firewall** | `192.168.20.1` | Gig0/0/1 | Roteamento de borda e segurança |
-| **Windows Server (AD/DNS)** | `192.168.20.10` | FE0 | Controlador de Domínio e escopo DHCP |
-| **Linux Server (GLPI)** | `192.168.20.20` | FE0 | Sistema de chamados técnicos |
-| **Impressora de Rede** | `192.168.20.30` | FE0 | Impressora compartilhada do escritório |
-| **Access Point (Wi-Fi)** | `192.168.20.60` | Port 0 | Distribuição de sinal sem fio (SSID: Zetta) |
-| **Estações de Trabalho** | DHCP | FE0 / Dynamic | IPs distribuídos do `.100` ao `.200` |
+| Servidor / Equipamento | Esdereço IP | Função no projeto |
+|------------------------|----|--------|
+| **Srv-FW-01** | 192.168.20.1 | Firewall / NAT / DNS |
+| **Srv-DC-01** | 192.168.20.10 | Active Directory + DHCP |
+| **Srv-APP-01** | 192.168.20.20 | GLPI + WordPress |
+| **Srv-DB-01** | 192.168.20.40 | MySQL |
+| **Impressora de Rede** | 192.168.20.50 | Impressora compartilhada |
+| **Access Point (Wi-Fi)** | 192.168.20.60 | Wi-Fi — Zetta |
+| **Estações de Trabalho** | DHCP .100–.200 | — |
 
 ---
 
@@ -121,7 +122,16 @@ Abaixo está o registro cronológico das etapas de montagem, configuração e te
 
 ---
 
-### 🧪 Fase 4: Testes de Conectividade e Homologação
+### 🧪 Fase 4: O Desafio do Bloqueio de Conteúdo Indesejado
+*Configuração de regras de redirecionamento no Firewall do Debian para interceptar tentativas de acesso a redes sociais e conteúdos indesejados (Porta 80). O tráfego capturado é desviado por DNAT para o Windows Server, onde o serviço de Web Server (IIS) hospeda uma página institucional customizada hiperdetalhada da Zetta Corp.*
+
+<p align="center">
+  <img src="a62f305b-7258-48a7-88aa-41dbc72c1b16" alt="Regras de Firewall e Redirecionamento no Debian" width="400" style="margin: 10px;">
+  <img src="1000320276.jpg" alt="Página de Bloqueio Zetta Carregada no Notebook" width="400" style="margin: 10px;">
+</p>
+
+---
+### 🧪 Fase 5: Testes de Conectividade e Homologação
 *Validação final de que tudo funciona de verdade no mundo real. Telas comprovando o recebimento de IPs automáticos pelas estações de trabalho, testes de ping e o funcionamento do Firewall de borda isolando a rede.*
 
 <p align="center">
