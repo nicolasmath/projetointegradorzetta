@@ -58,15 +58,15 @@ A rede está estruturada na subrede **192.168.20.0/24** para organizar os ativos
 
 ### Plano de Endereçamento IP
 
-| Servidor / Equipamento | Esdereço IP | Função no projeto |
+| Servidor / Equipamento | IP | Função |
 |------------------------|----|--------|
-| **Srv-FW-01** | 192.168.20.1 | Firewall / NAT / DNS |
-| **Srv-DC-01** | 192.168.20.10 | Active Directory + DHCP |
-| **Srv-APP-01** | 192.168.20.20 | GLPI + WordPress |
-| **Srv-DB-01** | 192.168.20.40 | MySQL |
-| **Impressora de Rede** | 192.168.20.50 | Impressora compartilhada |
-| **Access Point (Wi-Fi)** | 192.168.20.60 | Wi-Fi — Zetta |
-| **Estações de Trabalho** | DHCP .100–.200 | — |
+| Deb-FW | 192.168.20.1 | Firewall / NAT / DNS |
+| Win-SV | 192.168.20.10 | Active Directory + DHCP |
+| Deb-WP | 192.168.20.20 | GLPI + WordPress |
+| Deb-TC | 192.168.20.40 | MySQL + Tomcat |
+| Printer | 192.168.20.30 | Impressora compartilhada |
+| Access Point | 192.168.20.60 | Wi-Fi — Zetta |
+| Estações | 192.168.20.X (100<=X<=200) | - |
 
 ---
 
