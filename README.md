@@ -127,7 +127,7 @@ Abaixo está o registro cronológico das etapas de montagem, configuração e te
 
 <p align="center">
   <img src="a62f305b-7258-48a7-88aa-41dbc72c1b16" alt="Regras de Firewall e Redirecionamento no Debian" width="400" style="margin: 10px;">
-  <img src="1000320276.jpg" alt="Página de Bloqueio Zetta Carregada no Notebook" width="400" style="margin: 10px;">
+  <img src="paginaerro.png" alt="Página de Bloqueio Zetta Carregada no Notebook" width="400" style="margin: 10px;">
 </p>
 
 ---
