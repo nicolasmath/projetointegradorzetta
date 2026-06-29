@@ -117,7 +117,7 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 
 <p align="center">
   <img src="dhcp-active.jpg" alt="Painel do Active Directory, GPOs e Cotas de Disco" width="400" style="margin: 10px;">
-  <img src="documentacao/fotos/fase3_linux_glpi.jpg" alt="Estrutura de Pastas e Mapeamento via Script .bat" width="400" style="margin: 10px;">
+  <img src="gpo.jpg" alt="Estrutura de Pastas e Mapeamento via Script .bat" width="400" style="margin: 10px;">
 </p>
 
 ---
@@ -127,7 +127,7 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 
 <p align="center">
   <img src="DEB_FW.jpg" alt="Monitoramento com Netdata e Firewall no Debian" width="400" style="margin: 10px;">
-  <img src="paginaerro.png" alt="Acesso SSH e Regras Restritivas de Rede" width="400" style="margin: 10px;">
+  <img src="cccc" alt="Acesso SSH e Regras Restritivas de Rede" width="400" style="margin: 10px;">
 </p>
 
 ---
@@ -156,6 +156,6 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 *Validação do desafio técnico de interceptação: requisições Web externas para redes sociais e conteúdos indesejados (Porta 80) são capturadas pelo Firewall Debian e redirecionadas via DNAT para o serviço IIS do Windows Server, renderizando de forma forçada a página interna de bloqueio institucional da Zetta. Testes práticos de ping e auditoria de impressão local disparada com sucesso via smartphones e estações de trabalho homologadas.*
 
 <p align="center">
-  <img src="documentacao/fotos/fase4_testes_ping.jpg" alt="Página de Bloqueio Customizada Zetta via Redirecionamento DNAT" width="400" style="margin: 10px;">
+  <img src="paginaerro.png" alt="Página de Bloqueio Customizada Zetta via Redirecionamento DNAT" width="400" style="margin: 10px;">
   <img src="documentacao/fotos/fase4_homologacao.jpg" alt="Validação Final de Conectividade e Impressão de Teste" width="400" style="margin: 10px;">
 </p>
