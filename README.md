@@ -88,53 +88,74 @@ A rede está estruturada na subrede **192.168.20.0/24** para organizar os ativos
 
 ## 📸 Galeria de Implementação Física e Fases do Projeto
 
-Abaixo está o registro cronológico das etapas de montagem, configuração e testes da nossa infraestrutura real.
+Abaixo está o registro cronológico e técnico das etapas de montagem, provisionamento, segurança e homologação da infraestrutura real da Zetta.
 
 ---
 
-### 🧱 Fase 1: Infraestrutura Física e Cabeamento
-*Nesta etapa, realizamos a identificação dos equipamentos de hardware, montagem dos racks e a confecção/crimpagem dos cabos de rede Cat.6 para interligar os computadores.*
+### 🧱 Fase 1: Infraestrutura Física, Cabeamento e Ativos de Rede
+*Identificação física e etiquetagem dos ativos no rack, incluindo o Switch 3Com corporativo (switch branco). Confecção, crimpagem e certificação dos cabos de rede Cat.6 para interligar os servidores e o enlace físico de dados. Correção de falha na camada 1/2 diretamente no Switch, restabelecendo o fluxo da LAN.*
 
 <p align="center">
-  <img src="Switch.jpg" alt="Montagem do Hardware e Racks" width="400" style="margin: 10px;">
-  <img src="Crimpagem.jpg" alt="Crimpagem e Organização dos Cabos" width="400" style="margin: 10px;">
+  <img src="Switch.jpg" alt="Identificação dos Ativos de Rede e Switch 3Com" width="400" style="margin: 10px;">
+  <img src="Crimpagem.jpg" alt="Crimpagem Cat.6 e Organização Física do Rack" width="400" style="margin: 10px;">
 </p>
 
 ---
 
-### 💿 Fase 2: Instalação de Sistemas e Provisionamento
-*Instalação dos Sistemas Operacionais nas máquinas físicas. Configuração do ambiente de testes e carregamento de drivers específicos (como Intel RST) para o perfeito reconhecimento e desempenho dos SSDs e storages.*
+### 💿 Fase 2: Instalação, Provisionamento e Resiliência de Hardware
+*Instalação limpa dos Sistemas Operacionais nas plataformas físicas. No Windows Server, realização do agrupamento de interfaces de rede via NIC Teaming com as duas placas físicas reais, garantindo tolerância a falhas. Carregamento prévio de drivers controladores (Intel RST) para o pleno reconhecimento dos SSDs de alta performance.*
 
 <p align="center">
-  <img src="Debian.jpg" alt="Instalação do SO nas Máquinas" width="400" style="margin: 10px;">
-  <img src="Win.jpg" alt="Configuração de Hipervisores e Servidores" width="400" style="margin: 10px;">
+  <img src="Debian.jpg" alt="Instalação do Debian e Windows Server" width="400" style="margin: 10px;">
+  <img src="Win.jpg" alt="Configuração de NIC Teaming e Drivers de Armazenamento" width="400" style="margin: 10px;">
 </p>
 
 ---
 
-### 🔑 Fase 3: Configuração dos Serviços de Rede
-*Momento em que os Sysadmins e Engenheiros de Rede colocaram a inteligência do projeto para rodar: criação do Controlador de Domínio no Windows Server, subida das diretivas (GPOs), escopo DHCP ativo e inicialização dos servidores Linux (GLPI e Web).*
+### 🔑 Fase 3: Active Directory, Lógica de GPOs e Servidor de Arquivos
+*Estruturação lógica do domínio `zetta.local`. Implementação de árvore com mais de 30 GPOs na OU Zetta (incluindo travamento e preenchimento de papel de parede corporativo, logon interativo com aviso de segurança legal e bloqueio de CMD/Executar). Configuração do Servidor de Arquivos com Matriz de Permissões NTFS restritivas por grupos, cotas de disco por usuário, triagem de extensões de arquivos e agendamento automático de backups.*
 
 <p align="center">
-  <img src="dhcp-active.jpg" alt="Painel do Active Directory e DHCP" width="400" style="margin: 10px;">
-  <img src="documentacao/fotos/fase3_linux_glpi.jpg" alt="Servidores Linux e Tela de Chamados GLPI" width="400" style="margin: 10px;">
+  <img src="dhcp-active.jpg" alt="Painel do Active Directory, GPOs e Cotas de Disco" width="400" style="margin: 10px;">
+  <img src="documentacao/fotos/fase3_linux_glpi.jpg" alt="Estrutura de Pastas e Mapeamento via Script .bat" width="400" style="margin: 10px;">
 </p>
 
 ---
 
-### 🧪 Fase 4: O Desafio do Bloqueio de Conteúdo Indesejado
-*Configuração de regras de redirecionamento no Firewall do Debian para interceptar tentativas de acesso a redes sociais e conteúdos indesejados (Porta 80). O tráfego capturado é desviado por DNAT para o Windows Server, onde o serviço de Web Server (IIS) hospeda uma página institucional customizada hiperdetalhada da Zetta Corp.*
+### 🧪 Fase 4: Firewall Restritivo, Regras de DNAT e Monitoramento Remoto
+*Configuração do Firewall de borda no Debian atuando como gateway da rede, realizando o roteamento de pacotes (NAT) e provendo segurança por regras restritivas do iptables. Implementação do Netdata para monitoramento em tempo real do hardware Linux e liberação do serviço de SSH para gerência remota segura executada a partir do Windows Server.*
 
 <p align="center">
-  <img src="DEB_FW.jpg" alt="Regras de Firewall e Redirecionamento no Debian" width="400" style="margin: 10px;">
-  <img src="paginaerro.png" alt="Página de Bloqueio Zetta Carregada no Notebook" width="400" style="margin: 10px;">
+  <img src="DEB_FW.jpg" alt="Monitoramento com Netdata e Firewall no Debian" width="400" style="margin: 10px;">
+  <img src="paginaerro.png" alt="Acesso SSH e Regras Restritivas de Rede" width="400" style="margin: 10px;">
 </p>
 
 ---
-### 🧪 Fase 5: Testes de Conectividade e Homologação
-*Validação final de que tudo funciona de verdade no mundo real. Telas comprovando o recebimento de IPs automáticos pelas estações de trabalho, testes de ping e o funcionamento do Firewall de borda isolando a rede.*
+
+### ☕ Fase 5: Servidor de Aplicação Java, Banco de Dados e Contingência
+*Hospedagem do sistema de Agenda de Contatos no Servidor Linux de Aplicação rodando Java e Apache Tomcat. Provisionamento do banco de dados MySQL Oracle monitorado via Workbench, com rotinas validadas de simulação de desastre: drop completo da base de dados e restauração imediata do ambiente em produção através de dump SQL.*
 
 <p align="center">
-  <img src="documentacao/fotos/fase4_testes_ping.jpg" alt="Testes de Conectividade com Ping" width="400" style="margin: 10px;">
-  <img src="documentacao/fotos/fase4_homologacao.jpg" alt="Infraestrutura Pronta e Funcionando" width="400" style="margin: 10px;">
+  <img src="Tomcat.jpg" alt="Deploy da Aplicação no Apache Tomcat" width="400" style="margin: 10px;">
+  <img src="MySQL_Backup.jpg" alt="Monitoramento de Performance e Restore de Backup no MySQL" width="400" style="margin: 10px;">
+</p>
+
+---
+
+### 📡 Fase 6: Integração DHCP, Distribuição Wireless e Homologação Final
+*Subida do escopo DHCP ativo do Windows Server distribuindo ranges dinâmicos para hosts e aplicando reservas estáticas de IP para a impressora de rede e para os servidores Linux (Java e WordPress). Integração do roteador físico configurado no modo Access Point isolado para a rede Wi-Fi Corporativa da Zetta.*
+
+<p align="center">
+  <img src="dhcp_scope.jpg" alt="Configuração de Escopo DHCP e Reservas de IP" width="400" style="margin: 10px;">
+  <img src="Access_Point.jpg" alt="Homologação de Wi-Fi e Ativos Wireless" width="400" style="margin: 10px;">
+</p>
+
+---
+
+### 🖥️ Fase 7: Interceptação de Tráfego e Testes de Conectividade Extremos
+*Validação do desafio técnico de interceptação: requisições Web externas para redes sociais e conteúdos indesejados (Porta 80) são capturadas pelo Firewall Debian e redirecionadas via DNAT para o serviço IIS do Windows Server, renderizando de forma forçada a página interna de bloqueio institucional da Zetta. Testes práticos de ping e auditoria de impressão local disparada com sucesso via smartphones e estações de trabalho homologadas.*
+
+<p align="center">
+  <img src="documentacao/fotos/fase4_testes_ping.jpg" alt="Página de Bloqueio Customizada Zetta via Redirecionamento DNAT" width="400" style="margin: 10px;">
+  <img src="documentacao/fotos/fase4_homologacao.jpg" alt="Validação Final de Conectividade e Impressão de Teste" width="400" style="margin: 10px;">
 </p>
