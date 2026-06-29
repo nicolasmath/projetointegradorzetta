@@ -127,7 +127,6 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 
 <p align="center">
   <img src="DEB_FW.jpg" alt="Monitoramento com Netdata e Firewall no Debian" width="400" style="margin: 10px;">
-  <img src="cccc" alt="Acesso SSH e Regras Restritivas de Rede" width="400" style="margin: 10px;">
 </p>
 
 ---
@@ -135,20 +134,10 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 ### ☕ Fase 5: Servidor de Aplicação Java, Banco de Dados e Contingência
 *Hospedagem do sistema de Agenda de Contatos no Servidor Linux de Aplicação rodando Java e Apache Tomcat. Provisionamento do banco de dados MySQL Oracle monitorado via Workbench, com rotinas validadas de simulação de desastre: drop completo da base de dados e restauração imediata do ambiente em produção através de dump SQL.*
 
-<p align="center">
-  <img src="Tomcat.jpg" alt="Deploy da Aplicação no Apache Tomcat" width="400" style="margin: 10px;">
-  <img src="MySQL_Backup.jpg" alt="Monitoramento de Performance e Restore de Backup no MySQL" width="400" style="margin: 10px;">
-</p>
-
 ---
 
 ### 📡 Fase 6: Integração DHCP, Distribuição Wireless e Homologação Final
 *Subida do escopo DHCP ativo do Windows Server distribuindo ranges dinâmicos para hosts e aplicando reservas estáticas de IP para a impressora de rede e para os servidores Linux (Java e WordPress). Integração do roteador físico configurado no modo Access Point isolado para a rede Wi-Fi Corporativa da Zetta.*
-
-<p align="center">
-  <img src="dhcp_scope.jpg" alt="Configuração de Escopo DHCP e Reservas de IP" width="400" style="margin: 10px;">
-  <img src="Access_Point.jpg" alt="Homologação de Wi-Fi e Ativos Wireless" width="400" style="margin: 10px;">
-</p>
 
 ---
 
@@ -157,5 +146,5 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 
 <p align="center">
   <img src="paginaerro.png" alt="Página de Bloqueio Customizada Zetta via Redirecionamento DNAT" width="400" style="margin: 10px;">
-  <img src="documentacao/fotos/fase4_homologacao.jpg" alt="Validação Final de Conectividade e Impressão de Teste" width="400" style="margin: 10px;">
+  <img src="documentacao/fotos/fase4_homologacao.jpg" alt="Cenário completo" width="400" style="margin: 10px;">
 </p>
