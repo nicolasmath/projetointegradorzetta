@@ -34,7 +34,7 @@ Ser a principal referência em terceirização e infraestrutura de TI para empre
 ### Planta Baixa do Escritório
 
 <p align="center">
-  <img src="imagens2/PlantaescritórioTI.png" alt="Logo zetta" width="700">
+  <img src="imagens2/plantaescritorioTI.png" alt="Logo zetta" width="700">
 </p>
 
 ---
