@@ -96,8 +96,8 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 *Identificação física e etiquetagem dos ativos no rack, incluindo o Switch 3Com corporativo (switch branco). Confecção, crimpagem e certificação dos cabos de rede Cat.6 para interligar os servidores e o enlace físico de dados. Correção de falha na camada 1/2 diretamente no Switch, restabelecendo o fluxo da LAN.*
 
 <p align="center">
-  <img src="Switch.jpg" alt="Identificação dos Ativos de Rede e Switch 3Com" width="400" style="margin: 10px;">
-  <img src="Crimpagem.jpg" alt="Crimpagem Cat.6 e Organização Física do Rack" width="400" style="margin: 10px;">
+  <img src="imagens/Switch.jpg" alt="Identificação dos Ativos de Rede e Switch 3Com" width="400" style="margin: 10px;">
+  <img src="imagens/Crimpagem.jpg" alt="Crimpagem Cat.6 e Organização Física do Rack" width="400" style="margin: 10px;">
 </p>
 
 ---
@@ -106,8 +106,8 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 *Instalação limpa dos Sistemas Operacionais nas plataformas físicas. No Windows Server, realização do agrupamento de interfaces de rede via NIC Teaming com as duas placas físicas reais, garantindo tolerância a falhas. Carregamento prévio de drivers controladores (Intel RST) para o pleno reconhecimento dos SSDs de alta performance.*
 
 <p align="center">
-  <img src="Debian.jpg" alt="Instalação do Debian e Windows Server" width="400" style="margin: 10px;">
-  <img src="Win.jpg" alt="Configuração de NIC Teaming e Drivers de Armazenamento" width="400" style="margin: 10px;">
+  <img src="imagens/Debian.jpg" alt="Instalação do Debian e Windows Server" width="400" style="margin: 10px;">
+  <img src="imagens/Win.jpg" alt="Configuração de NIC Teaming e Drivers de Armazenamento" width="400" style="margin: 10px;">
 </p>
 
 ---
@@ -116,8 +116,8 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 *Estruturação lógica do domínio `zetta.local`. Implementação de árvore com mais de 30 GPOs na OU Zetta (incluindo travamento e preenchimento de papel de parede corporativo, logon interativo com aviso de segurança legal e bloqueio de CMD/Executar). Configuração do Servidor de Arquivos com Matriz de Permissões NTFS restritivas por grupos, cotas de disco por usuário, triagem de extensões de arquivos e agendamento automático de backups.*
 
 <p align="center">
-  <img src="dhcp-active.jpg" alt="Painel do Active Directory, GPOs e Cotas de Disco" width="400" style="margin: 10px;">
-  <img src="gpo.jpg" alt="Estrutura de Pastas e Mapeamento via Script .bat" width="400" style="margin: 10px;">
+  <img src="imagens/dhcp-active.jpg" alt="Painel do Active Directory, GPOs e Cotas de Disco" width="400" style="margin: 10px;">
+  <img src="imagens/gpo.jpg" alt="Estrutura de Pastas e Mapeamento via Script .bat" width="400" style="margin: 10px;">
 </p>
 
 ---
@@ -126,7 +126,7 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 *Configuração do Firewall de borda no Debian atuando como gateway da rede, realizando o roteamento de pacotes (NAT) e provendo segurança por regras restritivas do iptables. Implementação do Netdata para monitoramento em tempo real do hardware Linux e liberação do serviço de SSH para gerência remota segura executada a partir do Windows Server.*
 
 <p align="center">
-  <img src="DEB_FW.jpg" alt="Monitoramento com Netdata e Firewall no Debian" width="400" style="margin: 10px;">
+  <img src="imagens/DEB_FW.jpg" alt="Monitoramento com Netdata e Firewall no Debian" width="400" style="margin: 10px;">
 </p>
 
 ---
@@ -134,10 +134,20 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 ### ☕ Fase 5: Servidor de Aplicação Java, Banco de Dados e Contingência
 *Hospedagem do sistema de Agenda de Contatos no Servidor Linux de Aplicação rodando Java e Apache Tomcat. Provisionamento do banco de dados MySQL Oracle monitorado via Workbench, com rotinas validadas de simulação de desastre: drop completo da base de dados e restauração imediata do ambiente em produção através de dump SQL.*
 
+<p align="center">
+  <img src="imagens/agenda-dao-eclipse.png" alt="Arquitetura DAO no Eclipse" width="260" style="margin: 5px;">
+  <img src="imagens/agenda-data-import.png" alt="Importação de Dados SQL" width="260" style="margin: 5px;">
+  <img src="imagens/agenda-schemas-query.png" alt="Consultas e Schemas MySQL" width="260" style="margin: 5px;">
+</p>
+
 ---
 
 ### 📡 Fase 6: Integração DHCP, Distribuição Wireless e Homologação Final
 *Subida do escopo DHCP ativo do Windows Server distribuindo ranges dinâmicos para hosts e aplicando reservas estáticas de IP para a impressora de rede e para os servidores Linux (Java e WordPress). Integração do roteador físico configurado no modo Access Point isolado para a rede Wi-Fi Corporativa da Zetta.*
+
+<p align="center">
+  <img src="imagens/painel-wordpress.png" alt="Painel de Controle WordPress Zetta" width="400" style="margin: 10px;">
+</p>
 
 ---
 
@@ -145,6 +155,6 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 *Validação do desafio técnico de interceptação: requisições Web externas para redes sociais e conteúdos indesejados (Porta 80) são capturadas pelo Firewall Debian e redirecionadas via DNAT para o serviço IIS do Windows Server, renderizando de forma forçada a página interna de bloqueio institucional da Zetta. Testes práticos de ping e auditoria de impressão local disparada com sucesso via smartphones e estações de trabalho homologadas.*
 
 <p align="center">
-  <img src="paginaerro.png" alt="Página de Bloqueio Customizada Zetta via Redirecionamento DNAT" width="400" style="margin: 10px;">
-  <img src="documentacao/fotos/fase4_homologacao.jpg" alt="Cenário completo" width="400" style="margin: 10px;">
+  <img src="imagens/paginaerro.png" alt="Página de Bloqueio Customizada Zetta via Redirecionamento DNAT" width="400" style="margin: 10px;">
+  <img src="imagens/cenário.png" alt="Cenário de Homologação e Topologia Final do Projeto" width="400" style="margin: 10px;">
 </p>
