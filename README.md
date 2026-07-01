@@ -1,4 +1,4 @@
-![GitHub License](https://img.shields.io/github/license/nicolasmath/lab-redes-01)
+![GitHub](https://img.shields.io/github/license/nicolasmath/senac-tat?style=for-the-badge)
 
 # Projeto Integrador - Implantação de Infraestrutura de TI
 
