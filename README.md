@@ -135,7 +135,7 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 *Hospedagem do sistema de Agenda de Contatos no Servidor Linux de Aplicação rodando Java e Apache Tomcat. Provisionamento do banco de dados MySQL Oracle monitorado via Workbench, com rotinas validadas de simulação de desastre: drop completo da base de dados e restauração imediata do ambiente em produção através de dump SQL.*
 
 <p align="center">
-  <img src="imagens/agenda-dao-eclipse.png" alt="Arquitetura DAO no Eclipse" width="260" style="margin: 5px;">
+  <img src="imagens/agenda-dao-eclipse.png" alt="Arquitetura DAO no Eclipse" width="430" style="margin: 5px;">
   <img src="imagens/agenda-data-import.png" alt="Importação de Dados SQL" width="260" style="margin: 5px;">
   <img src="imagens/agenda-schemas-query.png" alt="Consultas e Schemas MySQL" width="260" style="margin: 5px;">
 </p>
