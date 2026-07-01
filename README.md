@@ -143,10 +143,12 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 ---
 
 ### 📡 Fase 6: Integração DHCP, Distribuição Wireless e Homologação Final
-*Subida do escopo DHCP ativo do Windows Server distribuindo ranges dinâmicos para hosts e aplicando reservas estáticas de IP para a impressora de rede e para os servidores Linux (Java e WordPress). Integração do roteador físico configurado no modo Access Point isolado para a rede Wi-Fi Corporativa da Zetta.*
+*Subida do escopo DHCP ativo do Windows Server distribuindo ranges dinâmicos para hosts e aplicando reservas estáticas de IP para a impressora de rede e para os servidores Linux (Java e WordPress). Integração do roteador físico configurado no modo Access Point isolado para a rede Wi-Fi Corporativa da Zetta. Validação e auditoria do hardware de impressão térmica corporativa através da interface de gerência e emissão do auto-teste de conectividade.*
 
 <p align="center">
-  <img src="imagens/painel-wordpress.png" alt="Painel de Controle WordPress Zetta" width="400" style="margin: 10px;">
+  <img src="imagens/painel-wordpress.png" alt="Painel de Controle WordPress Zetta" width="260" style="margin: 5px;">
+  <img src="imagens/impressoraiptela.jpg" alt="Interface Web de Configuração da Impressora Elgin i8" width="260" style="margin: 5px;">
+  <img src="imagens/folhateste.jpg" alt="Auto Teste Físico de Impressão Elgin i8" width="260" style="margin: 5px;">
 </p>
 
 ---
