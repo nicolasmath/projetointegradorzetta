@@ -126,7 +126,7 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 *Configuração do Firewall de borda no Debian atuando como gateway da rede, realizando o roteamento de pacotes (NAT) e provendo segurança por regras restritivas do iptables. Implementação do Netdata para monitoramento em tempo real do hardware Linux e liberação do serviço de SSH para gerência remota segura executada a partir do Windows Server.*
 
 <p align="center">
-  <img src="imagens/DEB_FW.jpg" alt="Monitoramento com Netdata e Firewall no Debian" width="400" style="margin: 10px;">
+  <img src="imagens/monitoramento.jpg" alt="Monitoramento com Netdata e Firewall no Debian" width="400" style="margin: 10px;">
 </p>
 
 ---
