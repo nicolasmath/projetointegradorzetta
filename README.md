@@ -7,7 +7,7 @@
 **Slogan:** Soluções tecnológicas e suporte em TI.
 
 <p align="center">
-  <img src="Logotipo.png" alt="Zetta" width="450">
+  <img src="imagens2/Logotipo.png" alt="Zetta" width="450">
 </p>
 
 Alunos: Nicolas, Anna, Rafael, Sara, Gabriel M., Levy.
@@ -34,7 +34,7 @@ Ser a principal referência em terceirização e infraestrutura de TI para empre
 ### Planta Baixa do Escritório
 
 <p align="center">
-  <img src="PlantaescritórioTI.png" alt="Logo Hair Hi-Tech" width="700">
+  <img src="imagens2/PlantaescritórioTI.png" alt="Logo zetta" width="700">
 </p>
 
 ---
@@ -53,7 +53,7 @@ A rede está estruturada na subrede **192.168.20.0/24** para organizar os ativos
 
 <h3 align="center">🌐 Topologia Lógica da Rede</h3>
 <p align="center">
-  <img src="Topologia.png" alt="Topologia da Rede - Cisco Packet Tracer" width="750">
+  <img src="imagens2/Topologia.png" alt="Topologia da Rede - Cisco Packet Tracer" width="750">
 </p>
 
 ### Plano de Endereçamento IP
@@ -73,7 +73,7 @@ A rede está estruturada na subrede **192.168.20.0/24** para organizar os ativos
 ### Topologia Lógica do Cenário
 
 <p align="center">
-  <img src="cenário.png" alt="Logo Hair Hi-Tech" width="500">
+  <img src="imagens2/cenário.png" alt="Logo Hair Hi-Tech" width="500">
 </p>
 
 ---
