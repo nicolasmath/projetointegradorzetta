@@ -53,7 +53,7 @@ A rede está estruturada na subrede **192.168.20.0/24** para organizar os ativos
 
 <h3 align="center">🌐 Topologia Lógica da Rede</h3>
 <p align="center">
-  <img src="topologiav2.png" alt="Topologia da Rede - Cisco Packet Tracer" width="750">
+  <img src="imagens/topologiacena.png" alt="Topologia da Rede - Cisco Packet Tracer" width="750">
 </p>
 
 ### Plano de Endereçamento IP
