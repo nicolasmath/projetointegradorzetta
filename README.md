@@ -158,5 +158,5 @@ Abaixo está o registro cronológico e técnico das etapas de montagem, provisio
 
 <p align="center">
   <img src="imagens/paginaerro.png" alt="Página de Bloqueio Customizada Zetta via Redirecionamento DNAT" width="400" style="margin: 10px;">
-  <img src="imagens/cenário.png" alt="Cenário de Homologação e Topologia Final do Projeto" width="400" style="margin: 10px;">
+  <img src="imagens/cenariofinall.jpg" alt="Cenário de Homologação e Topologia Final do Projeto" width="400" style="margin: 10px;">
 </p>
